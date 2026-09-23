@@ -9,3 +9,7 @@ arcade/.progress.json
 *.i64
 *.idb
 *.patched
+
+# never commit crackme signing keys
+crackme05/priv.pem
+*.pem
