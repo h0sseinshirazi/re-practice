@@ -5,3 +5,6 @@ arcade/.progress.json
 *.rep/
 *.lock
 *.lock~
+# IDA databases (embed local paths and license data)
+*.i64
+*.idb

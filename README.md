@@ -67,7 +67,7 @@ cd crackme05 && python3 server.py  # port 8090, then ./authv5
 
 ## Tooling
 
-* **Static:** IDA (the `.i64` files are my databases) and Ghidra. objdump and readelf
+* **Static:** IDA and Ghidra. objdump and readelf
   are enough for most of the early rungs.
 * **Dynamic:** plain gdb. Ghidra's debugger took more time than it saved.
 * **Rule:** script the inversion. Doing hex arithmetic by hand is where mistakes creep in.
@@ -75,11 +75,11 @@ cd crackme05 && python3 server.py  # port 8090, then ./authv5
 ## Layout
 
 ```
-crackmeNN/        binary, IDA database, WALKTHROUGH.md, solve.py
+crackmeNN/        binary, WALKTHROUGH.md, solve.py
 crackme05/        binary + server side (server.py, priv.pem) + NOTES.md
 arcade/           launcher (arcade.py, arcade_gui.py), level1–8, .checksums.json
 arcade/walkthroughs/
 ```
 
-Local state isn't committed: arcade progress (`.progress.json`), `__pycache__`, and Ghidra
+Local state isn't committed: arcade progress (`.progress.json`), `__pycache__`, IDA databases, and Ghidra
 project files.
