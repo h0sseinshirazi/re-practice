@@ -15,10 +15,10 @@ comes from the binary alone.
 | I | [`crackme01/vault`](crackme01/WALKTHROUGH.md) | per-byte xor/add/rol against a `.rodata` table, symbols intact | ✅ solved |
 | II | [`crackme02/gate`](crackme02/WALKTHROUGH.md) | stripped, xor-hidden strings, chained state, divide-by-7 via magic multiply | ✅ solved |
 | II½ | [`crackme02b/tumbler`](crackme02b/WALKTHROUGH.md) | stripped per-byte transform, no chaining | ✅ solved |
-| III | `crackme03/lock` | mark III | ⬜ open |
+| III | [`crackme03/lock`](crackme03/WALKTHROUGH.md) | xorshift keystream mask + chained state + ptrace-shifted seed | ✅ solved |
 | III′ | [`crackme03b/chain`](crackme03b/WALKTHROUGH.md) | chained state + a ptrace guard that silently poisons the seed | ✅ solved |
 | IV | [`crackme04/authme`](crackme04/WALKTHROUGH.md) | "online" activation where the client trusts a constant | ✅ solved |
-| V | [`crackme05/authv5`](crackme05/NOTES.md) | online activation, done right | ⬜ open |
+| V | [`crackme05/authv5`](crackme05/NOTES.md) | online activation, done right | ⬜ in progress |
 
 Each solved rung has a `WALKTHROUGH.md` (recon → the check, with addresses → the inversion →
 takeaway) and a `solve.py` that prints the key. The solvers are tested against the real
