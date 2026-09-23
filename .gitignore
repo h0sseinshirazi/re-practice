@@ -1,0 +1,7 @@
+__pycache__/
+arcade/.progress.json
+# Ghidra project files (local tool state, not part of the ladder)
+*.gpr
+*.rep/
+*.lock
+*.lock~
