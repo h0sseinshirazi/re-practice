@@ -18,7 +18,7 @@ comes from the binary alone.
 | III | `crackme03/lock` | mark III | ⬜ open |
 | III′ | [`crackme03b/chain`](crackme03b/WALKTHROUGH.md) | chained state + a ptrace guard that silently poisons the seed | ✅ solved |
 | IV | [`crackme04/authme`](crackme04/WALKTHROUGH.md) | "online" activation where the client trusts a constant | ✅ solved |
-| V | [`crackme05/authv5`](crackme05/NOTES.md) | Ed25519-signed nonce: activation done right | ⬜ open (design notes only) |
+| V | [`crackme05/authv5`](crackme05/NOTES.md) | online activation, done right | ⬜ open |
 
 Each solved rung has a `WALKTHROUGH.md` (recon → the check, with addresses → the inversion →
 takeaway) and a `solve.py` that prints the key. The solvers are tested against the real
