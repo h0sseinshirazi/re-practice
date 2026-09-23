@@ -18,7 +18,7 @@ comes from the binary alone.
 | III | [`crackme03/lock`](crackme03/WALKTHROUGH.md) | xorshift keystream mask + chained state + ptrace-shifted seed | ✅ solved |
 | III′ | [`crackme03b/chain`](crackme03b/WALKTHROUGH.md) | chained state + a ptrace guard that silently poisons the seed | ✅ solved |
 | IV | [`crackme04/authme`](crackme04/WALKTHROUGH.md) | "online" activation where the client trusts a constant | ✅ solved |
-| V | [`crackme05/authv5`](crackme05/NOTES.md) | online activation, done right | ⬜ in progress |
+| V | [`crackme05/authv5`](crackme05/NOTES.md) | online activation, done right | ⬜ in progress · [spoiler](spoilers/authv5.md) |
 
 Each solved rung has a `WALKTHROUGH.md` (recon → the check, with addresses → the inversion →
 takeaway) and a `solve.py` that prints the key. The solvers are tested against the real
@@ -43,17 +43,18 @@ to always pass therefore doesn't count; the only way through is recovering the k
 |---|---|---|
 | 1 | vault-lite | ✅ [walkthrough](arcade/walkthroughs/level1.md) |
 | 2 | rolling | ✅ [walkthrough](arcade/walkthroughs/level2.md) |
-| 3 | linear system | ⬜ open |
-| 4 | keygen | ⬜ open |
-| 5 | anti-debug | ⬜ open |
-| 6 | self-decrypt | ⬜ open |
-| 7 | bytecode VM | ⬜ open |
-| 8 | avalanche VM | ⬜ open |
+| 3 | linear system | ⬜ open · [spoiler](spoilers/level3.md) |
+| 4 | keygen | ⬜ open · [spoiler](spoilers/level4.md) |
+| 5 | anti-debug | ⬜ open · [spoiler](spoilers/level5.md) |
+| 6 | self-decrypt | ⬜ open · [spoiler](spoilers/level6.md) |
+| 7 | bytecode VM | ⬜ open · [spoiler](spoilers/level7.md) |
+| 8 | avalanche VM | ⬜ open · [spoiler](spoilers/level8.md) |
 
 ## Spoiler policy
 
-* Open rungs get no walkthrough and no hints beyond their name. The arcade's `hint`
-  command is the only hint source.
+* Walkthroughs for rungs I haven't solved yet live in [`spoilers/`](spoilers/README.md), linked
+  only as "spoiler" in the tables above. Everything outside that folder stays hint-free, and
+  the arcade's `hint` command gives tiered nudges.
 * `crackme04/server.py`, `crackme05/server.py` and `crackme05/priv.pem` are the
   **server side** of the online rungs. They exist so the rungs can run, and reading them
   counts as cheating.
@@ -79,6 +80,7 @@ crackmeNN/        binary, WALKTHROUGH.md, solve.py
 crackme05/        binary + server side (server.py, priv.pem) + NOTES.md
 arcade/           launcher (arcade.py, arcade_gui.py), level1–8, .checksums.json
 arcade/walkthroughs/
+spoilers/         full walkthroughs + solvers for the open rungs (L3–L8, authv5)
 ```
 
 Local state isn't committed: arcade progress (`.progress.json`), `__pycache__`, IDA databases, and Ghidra

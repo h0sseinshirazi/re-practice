@@ -8,3 +8,4 @@ arcade/.progress.json
 # IDA databases (embed local paths and license data)
 *.i64
 *.idb
+*.patched

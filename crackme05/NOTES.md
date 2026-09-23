@@ -13,3 +13,5 @@ python3 server.py      # terminal 1
 
 `server.py` and `priv.pem` are the **server side**. They're here so the rung can run, and
 reading them is out of bounds.
+
+A full walkthrough is in [`../spoilers/authv5.md`](../spoilers/authv5.md). It spoils the whole rung.
